@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plan My Educator Cover Letter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Educator Career Resources</p>
+        <h1>Plan My Cover Letter</h1>
+        <p class="lede">Show why you fit this school — using what you learned about them and real examples from your experience.</p>
+      </div>
+      <button class="ghost" id="restartBtn" type="button">Start over</button>
+    </header>
+
+    <section class="progress-wrap" aria-label="Progress">
+      <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      <p id="progressText" class="progress-text">Step 1 of 6</p>
+    </section>
+
+    <section id="app" class="card" aria-live="polite"></section>
+  </main>
+
+  <template id="step1">
+    <div class="step">
+      <p class="step-label">Step 1</p>
+      <h2>Which school are you applying to?</h2>
+      <p class="hint">We’ll look for school research or application work you already completed first.</p>
+      <div id="savedApplicationArea"></div>
+      <div class="grid two">
+        <label>Position title<input id="position" type="text" placeholder="4th Grade Teacher" /></label>
+        <label>School<input id="school" type="text" placeholder="Lincoln Elementary" /></label>
+      </div>
+      <label>District<input id="district" type="text" placeholder="Iowa City Community School District" /></label>
+      <details class="research-card">
+        <summary><strong>Optional: add the job posting</strong></summary>
+        <p class="mini">Many educator postings are district-wide and generic. Add it if it includes something specific you want to respond to.</p>
+        <textarea id="jobDescription" rows="7" placeholder="Paste the posting or distinctive parts here..."></textarea>
+      </details>
+      <div class="actions"><button class="primary" id="saveApplication">Continue</button></div>
+    </div>
+  </template>
+
+  <template id="step2">
+    <div class="step">
+      <p class="step-label">Step 2</p>
+      <h2>What stands out about this school?</h2>
+      <p class="hint">You only need one or two meaningful things that help explain why this school fits you.</p>
+      <div id="researchArea"></div>
+      <div class="actions split"><button class="secondary" data-back>Back</button><button class="primary" id="saveResearch">Continue</button></div>
+    </div>
+  </template>
+
+  <template id="step3">
+    <div class="step">
+      <p class="step-label">Step 3</p>
+      <h2>What part of your experience fits?</h2>
+      <p class="hint">Choose 2–3 areas that connect your experience to what you noticed about the school. If the posting includes something distinctive, we’ll consider that too.</p>
+      <div id="priorityList" class="choice-list"></div>
+      <div class="actions split"><button class="secondary" data-back>Back</button><button class="primary" id="savePriorities">Continue</button></div>
+    </div>
+  </template>
+
+  <template id="step4">
+    <div class="step">
+      <p class="step-label">Step 4</p>
+      <h2>Show the connection</h2>
+      <p class="hint">Use work you’ve already done when it fits. Otherwise, add one quick example.</p>
+      <div id="evidenceArea"></div>
+      <div class="actions split"><button class="secondary" data-back>Back</button><button class="primary" id="saveEvidence">Build my plan</button></div>
+    </div>
+  </template>
+
+  <template id="step5">
+    <div class="step">
+      <p class="step-label">Step 5</p>
+      <h2>Your cover letter plan</h2>
+      <p class="hint">Your goal is to show why this school makes sense for you — and what you would bring to it.</p>
+      <div id="planArea"></div>
+      <div class="actions split"><button class="secondary" data-back>Back</button><button class="primary" id="toDraft">Help me write it</button></div>
+    </div>
+  </template>
+
+  <template id="step6">
+    <div class="step">
+      <p class="step-label">Step 6</p>
+      <h2>Write from your plan</h2>
+      <p class="hint">Use the plan as a guide. Keep the details accurate and make the language sound like you.</p>
+      <div id="draftArea"></div>
+      <div class="actions split"><button class="secondary" data-back>Back</button><button class="primary" id="copyPlan">Copy my plan</button></div>
+      <p id="copyStatus" class="status" role="status"></p>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
